@@ -1,0 +1,42 @@
+<div id="background"> </div>
+<div id="wrapper">
+  <div id="checkin-wrapper">
+    <form id="checkin-form" action="checkin" method="post" >
+      <div>
+        <script src="{{@BASE}}/ui/js/select2.full.min.js"></script>
+        <script type="text/javascript">
+          $(document).ready(function() {
+            $(".searchable").select2({
+              placeholder: 'Pre-Registered Attendee Search',
+            });
+          });
+        </script>
+        <select id="users-drpdwn" name="id" class="searchable">
+          <option value="" disabled selected>Pre-Registered Attendee Search</option>
+
+          <repeat group="{{ @result }}" value="{{ @item }}">
+
+            <option value="{{ @item.id }}">{{ @item.lastname }}, {{ @item.firstname }} - {{ @item.company }}</option>
+          </repeat>
+        </select> &nbsp;
+      </div>
+      <label for="drawing"><be/><br/>Want to be included in Door Prize Drawing(s)?</label>
+      <div id="drawing">
+	  <input type="radio" name="drawing" value="1" checked> Yes
+	  <input type="radio" name="drawing" value="0"> No
+      </div>
+      <label for="vendordrawing"><br/>Opt into vendor drawing(s)?</label>
+      <div id="vendordrawing">
+	  <input type="radio" name="vendordrawing" value="1" checked> Yes*
+	  <input type="radio" name="vendordrawing" value="0"> No
+      </div><br/>
+      <div>
+        <button type="submit" name="submit" value="checkin">Checkin</button>
+      </div>
+    </form>
+  </div>
+  <div id="vendor-disclaimer" class="center">*By selecting "Yes," you're approving your contact information to be shared with the vendor<br/><br/> </div>
+  <div class="center">
+    <a href="{{ @BASE }}/"> home </a>
+  </div>
+</div>

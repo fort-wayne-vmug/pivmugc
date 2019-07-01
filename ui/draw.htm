@@ -1,0 +1,25 @@
+<div id="background"> </div>
+<div id="wrapper">
+  <div id="draw-wrapper">
+    <div class="center-title">{{ @title }}</div>
+    <div>
+	    <form action="{{@BASE}}/draw/random/name" method="post">
+		    <button type="submit" name="submit" value="random_name">Group Drawing</button>
+	    </form>
+    </div>
+    <div>
+	    <form action="{{@BASE}}/draw/resetdrawnflag" method="post">
+		    <button type="submit" name="submit" value="reset_drawn_flag">Reset Drawn Flags</button>
+	    </form>
+    </div>
+    <div>
+	    <form action="{{@BASE}}/draw/vendordrawing" method="post">
+		    <button type="submit" name="submit" value="vendor_drawing">Vendor Drawing</button>
+	    </form>
+    <div class="center">
+      <a href="{{ @BASE }}/"> home </a>
+      </br></br>
+      <a href="{{ @BASE }}/admin"> admin </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+  <div id="background"> </div>
+  <div id="wrapper">
+    <div id="register-wrapper">
+      <div class="center-title">Walk-on Registration</div>
+        <form id="register-form" action="register" method="post">
+          <label for="firstname">First Name: <input type="text" name="firstname" /></label>
+          <label for="lastname">Last Name: <input type="text" name="lastname" /></label>
+          <label for="email">Email Address: <input type="text" name="email" /></label>
+          <label for="company">Company: <input type="text" name="company" /></label>
+          <div id="Company-radio-buttons">
+		  <input type="radio" name="company_type" value="1" checked> Customer<br/>
+	    <input type="radio" name="company_type" value="2"> VMware/VMware Partner <br/>
+            <input type="radio" name="company_type" value="3"> OEM/Vendor
+          </div>
+	  <label for="drawing"><br/>Want to be in drawing(s) for door prizes?</label>
+	  <div id="drawing-radio-buttons">
+		  <input type="radio" name="drawing" value="1" checked> Yes;
+		  <input type="radio" name="drawing" value="0"> No
+	  </div>
+	  <label for="vendordrawing"><br/>Opt into vendor drawing(s)?</label>
+	  <div id="vendordrawing-radio-buttons">
+		  <input type="radio" name="vendordrawing" value="1" checked> Yes*;
+		  <input type="radio" name="vendordrawing" value="0"> No;
+	  </div>
+          <button type="submit" id="register-btn" name="submit" value="register">Register</button>
+        </form>
+    </div>
+    <div id="vendor-disclaimer" class="center">*By selecting "Yes," you're approving your contact information to be shared with the vendor<br/><br/> </div>
+    <div class="center">
+      <a href="{{ @BASE }}/"> home </a>
+    </div>
+  </div>

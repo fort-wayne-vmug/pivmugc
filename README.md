@@ -11,7 +11,7 @@ be used with any type of web server.
 
 [![pivmugc Front End Demo](https://s10.postimg.org/9pghci2c9/pi_frontend_demo_screenshot.jpg)](https://vimeo.com/177565807)
 
-### Installation Method #1 (Script + Recommended)
+### Installation Method #1 (Scripted)
 Start with a clean installation of Raspbian and issue the following commands:
 
 > wget https://raw.github.com/fort-wayne-vmug/pivmugc/master/pivmugc_installer.sh
@@ -25,31 +25,6 @@ drivers, configure most necessary services and create RAM_DISK a portion of
 memory used for writing tmp files to for better performance on the Raspberry Pi.
 
 [![pivmugc Installer Demo](https://s10.postimg.org/vd5fmy2qh/pi_installer_screenshot.jpg)](https://vimeo.com/177562196)
-
-### Installation Method #2 (Manual)
-Installation is simple. Download the latest master branch, extract the files
-and move the files into the web directory. Here is an example for a default
-NGINX web server. The paths will vary for lighttpd or Apache installations.
-
-> cd /tmp
-
-> wget https://github.com/fort-wayne-vmug/pivmugc/master.zip
-
-> unzip master.zip
-
-> cd pivmugc-master/
-
-> sudo cp -rf * /usr/local/nginx/html/
-
-> sudo chown www-data:www-data /usr/local/nginx/html/ -R
-
-For a manual installation of the RAM_DISK:
-
-> sudo mkdir /var/tmp
-
-> sudo echo 'tmpfs /var/tmp tmpfs nodev,nosuid,size=96M 0 0' >> /etc/fstab
-
-> sudo mount -a
 
 ### Post Installation Printer Configuration
 

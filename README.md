@@ -1,7 +1,7 @@
 ## Raspberry Pi VMUG Controller (pivmugc)
 
 ## Note
-This project was originally created by tkrn and was located at https://github.com/tkrn/pivmugc.  The project was archived.  This is an updated version.
+This project was originally created by tkrn and was located at https://github.com/tkrn/pivmugc.  The project doesn't seem to be maintained anymore.  This is an updated version.
 
 ### Description
 pivmugc provides web-based checkin functionality that was designed for a local
